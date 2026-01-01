@@ -38,9 +38,6 @@ The pipeline processes a **Home Depot product catalog dataset (2,551 products)**
 
 ---
 
-
----
-
 ## 🔄 Airflow DAG: `product_catalog_etl`
 
 The Airflow DAG orchestrates the complete pipeline:
@@ -135,7 +132,7 @@ This project demonstrates advanced Snowflake features:
 
 ## 📄 Academic Report
 
-📎 **[HW 3.2 – Product Catalog Data Pipeline Report (PDF)](report/HW3_2_Product_Catalog_Pipeline.pdf)**
+📎 **[Product Catalog Data Pipeline Report](report/Product_catalog_ETL_report.pdf)**
 
 ---
 
