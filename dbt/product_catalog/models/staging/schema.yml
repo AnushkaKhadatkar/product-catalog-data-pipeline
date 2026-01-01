@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: staging
+    description: "Raw staging data from source systems"
+    database: PRODUCT_CATALOG
+    schema: STAGING
+    tables:
+      - name: raw_products
+        description: "Raw product data loaded from CSV"
+        columns:
+          - name: product_id
+            description: "Unique product identifier"
+            tests:
+              - not_null
+          - name: price
+            description: "Product price in local currency"
+            tests:
+              - not_null
+          - name: title
+            description: "Product title/name"
+
+models:
+  - name: stg_products
+    description: "Cleaned and standardized product data from staging"
+    columns:
+      - name: product_id
+        description: "Unique product identifier"
+        tests:
+          - unique
+          - not_null
+      - name: title
+        description: "Product title"
+        tests:
+          - not_null
+      - name: price
+        description: "Product price"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "Last update timestamp"
+        tests:
+          - not_null
